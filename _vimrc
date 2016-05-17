@@ -45,7 +45,7 @@ syntax off
 if has("gui_running")
   colorscheme gruvbox
   set background=light
-	syntax on
+  syntax on
 endif
 
 " Default directory
@@ -85,7 +85,7 @@ imap <4-MiddleMouse> <Nop>
 nmap ; :
 
 " Java shortcuts.
-iab psvm public static void main(String[] args) {}<UP><END><BS><BS>
+iab psvm public static void main(String[] args) {<ENTER><ENTER>}<UP><END><BS><BS>
 iab sout System.out.println);<LEFT><LEFT>
 
 " Use 2 for spaces, and expand tabs into spaces.
@@ -121,24 +121,10 @@ vnoremap > >gv
 " So that accented characters can render correctly
 set encoding=utf-8
 
-" Usual windows shortcuts for switching tabs
-map <C-S-TAB> :tabp<CR>
-map <C-TAB> :tabn<CR>
-map <C-T> :tabe<CR>
-
-" Open in new tab
-map <C-O> :browse tabnew<CR>
-
 map \b :BufExplorer<CR>
 map vb :BufExplorer<CR>
 
 set showbreak=------->
-
-" To fix weird cursor glitch when switching buffer
-if v:version >= 700
-  au BufLeave * let b:winview = winsaveview()
-  au BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
-endif
 
 " Prevent # from unindenting in python
 autocmd BufRead *.py inoremap # X<c-h>#
