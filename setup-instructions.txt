@@ -1,0 +1,9 @@
+Checklist for fresh install:
+
+* Map Caps Lock -> Escape
+* Inconsolata font
+* NERDTree
+* BufExplorer
+* Gruvbox colorscheme
+* Solarized colorscheme
+* Ctrl-P (optional)
