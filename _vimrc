@@ -46,6 +46,8 @@ if has("gui_running")
   colorscheme gruvbox
   set background=light
   syntax on
+  set lines=999
+  set columns=999
 endif
 
 " Default directory
@@ -135,4 +137,11 @@ autocmd BufWinEnter notes.txt silent loadview
 
 " Map gv to select last pasted
 nnoremap gv `[V`]
+
+" Ctrl-P
+map <C-P> :CtrlP ~/dev/<CR>
+let g:ctrlp_max_files = 0
+let g:ctrlp_max_depth = 40
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
 
