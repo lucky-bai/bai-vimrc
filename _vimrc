@@ -128,8 +128,8 @@ map vb :BufExplorer<CR>
 
 set showbreak=------->
 
-" Prevent # from unindenting in python
-autocmd BufRead *.py inoremap # X<c-h>#
+" Prevent # from unindenting
+inoremap # X<c-h>#
 
 " Specific saving for notes.txt
 autocmd BufWinLeave notes.txt mkview
