@@ -13,4 +13,7 @@ mv nerdtree/lib/ .
 mv nerdtree/nerdtree_plugin/ .
 mv nerdtree/syntax/ .
 rsync -a nerdtree/plugin/ plugin/
+rm -rf nerdtree/
 cd ~
+rm -rf bai-vimrc/
+

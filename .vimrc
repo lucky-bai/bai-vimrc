@@ -40,12 +40,10 @@ set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 
 " If we are in GVIM, set colorscheme.
-" If we are in console, disable syntax highlighting.
-syntax off
+syntax on
 if has("gui_running")
   colorscheme gruvbox
   set background=dark
-  syntax on
   set lines=999
   set columns=999
 endif
