@@ -153,3 +153,10 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 " Faster macros
 set lazyredraw
+
+" F5 inserts date
+inoremap <F5> <ESC>i[<ESC>"=strftime("%a, %d %b %Y %H:%M:%S")<CR>pa] 
+
+" Replaces some ctrl combinations that break over SSH
+map gt <C-^>
+map gq <C-Q>
