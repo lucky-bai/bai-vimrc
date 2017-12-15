@@ -1,6 +1,7 @@
 cd ~
 git clone https://github.com/luckytoilet/bai-vimrc
 mv bai-vimrc/.vimrc .vimrc
+mv bai-vimrc/.tmux.conf .tmux.conf
 mkdir .vim
 cd ~/.vim
 git clone https://github.com/jlanzarotta/bufexplorer
