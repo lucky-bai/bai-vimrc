@@ -88,6 +88,9 @@ nmap ; :
 iab psvm public static void main(String[] args) {<ENTER><ENTER>}<UP><END><BS><BS>
 iab sout System.out.println);<LEFT><LEFT>
 
+" Insert breakpoint
+iab bbb import pdb; pdb.set_trace()
+
 " Use 2 for spaces, and expand tabs into spaces.
 set ts=2
 set sts=2
@@ -96,6 +99,7 @@ set et
 
 " Set the line wrap to wrap at word breaks and not between a word.
 set wrap linebreak textwidth=0
+set nowrap
 
 " Special application of the cc command. Instead of placing the cursor at the
 " beginning of the line as usual, we place it where it should be placed
@@ -135,6 +139,7 @@ inoremap # X<c-h>#
 autocmd BufWinLeave notes.txt mkview
 autocmd BufWinEnter notes.txt silent loadview 
 autocmd BufWinEnter notes.txt set nowrap
+autocmd BufWinEnter yume.txt set wrap
 
 au BufWinEnter *.sol set syn=javascript " Solidity
 
@@ -156,6 +161,13 @@ set lazyredraw
 
 " F5 inserts date
 inoremap <F5> <ESC>i[<ESC>"=strftime("%a, %d %b %Y %H:%M:%S")<CR>pa] 
+
+" Open cheat sheet
+com! CS :open C:\Users\Bai\Dropbox\cheatsheet.md
+com! NO :open C:\Users\Bai\Dropbox\notes.txt
+
+" Fix some syntax highlighting problems
+au BufWinEnter *.md syn sync fromstart
 
 " Replaces some ctrl combinations that break over SSH
 map gt <C-^>
