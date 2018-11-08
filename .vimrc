@@ -24,8 +24,8 @@ set noswapfile
 " Line numbers on
 set nu
 
-" After <enter> indent to previous (NP++ style)
-set smartindent
+" Enter to indent to previous
+set autoindent
 
 " Load automatically when file is changed externally
 set autoread
