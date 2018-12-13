@@ -11,7 +11,7 @@ set ruler
 set showcmd	
 set incsearch
 map Q gq
-set mouse=a
+set mouse=nvi
 set hlsearch
 
 " (for searching)
