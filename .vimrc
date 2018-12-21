@@ -44,6 +44,9 @@ syntax on
 if has("gui_running")
   colorscheme gruvbox
   set background=dark
+  com! COLO1 :colo gruvbox | set background=dark
+  com! COLO2 :colo solarized | set background=light
+  com! COLO3 :colo gruvbox | set background=light
   set lines=999
   set columns=999
 endif
