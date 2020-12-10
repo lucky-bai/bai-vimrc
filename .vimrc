@@ -54,8 +54,8 @@ endif
 " Default directory
 " cd C:\Users\Bai\Desktop\
 
-" F4 = :noh
-noremap <F4> :noh<CR>
+" CR = :noh
+noremap <CR> :noh<CR>
 
 " Blinking off.
 set gcr=a:blinkon0
